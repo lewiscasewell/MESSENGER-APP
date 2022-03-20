@@ -18,21 +18,16 @@ import { auth, db, storage } from "../firebase";
 import { ref, getDownloadURL, uploadBytes } from "firebase/storage";
 
 import User from "../components/User";
-import MessageForm from "../components/MessageForm";
 import Message from "../components/Message";
 import NavBar from "../components/NavBar";
 
 import {
   Avatar,
   Box,
-  Button,
-  Container,
-  Flex,
   Heading,
   IconButton,
   Input,
   Text,
-  Textarea,
 } from "@chakra-ui/react";
 import {
   ArrowBackIcon,
@@ -239,7 +234,6 @@ const Home = () => {
             h="100vh"
             display="flex"
             flexDir="column"
-            // m="0 auto"
             w={["100%"]}
             bg="white"
             ml={[0, 0, "20em"]}
@@ -269,7 +263,6 @@ const Home = () => {
               <Heading ml={2} size="sm" w="100%">
                 {chat.name}
               </Heading>
-              {/* <Box height={20} width="100%" bg="white" opacity={0.75}></Box> */}
             </Box>
             <Box h="100%" mt="49px" mb="30px" overflow="scroll">
               {msgs.length
@@ -347,59 +340,9 @@ const Home = () => {
                 />
               </Box>
             </form>
-
-            {/* <MessageForm
-              handleSubmit={handleSubmit}
-              text={text}
-              setText={setText}
-              img={img}
-              setImg={setImg}
-            /> */}
           </Box>
         </Box>
       )}
-
-      {/* <div className="home_container">
-        <div className="users_container" style={{ marginTop: "100px" }}>
-          {users.map((user) => (
-            <User
-              key={user.uid}
-              user={user}
-              selectUser={selectUser}
-              userCurrent={userCurrent}
-              chat={chat}
-            />
-          ))}
-        </div>
-
-        <div className="messages_container" style={{ marginTop: "100px" }}>
-          {chat ? (
-            <>
-              <div className="messages_user">
-                <h3>{chat.name}</h3>
-              </div>
-              <div className="messages">
-                {msgs.length
-                  ? msgs.map((msg, idx) => (
-                      <Message key={idx} msg={msg} userCurrent={userCurrent} />
-                    ))
-                  : null}
-              </div>
-              <div>
-                <MessageForm
-                  handleSubmit={handleSubmit}
-                  text={text}
-                  setText={setText}
-                  img={img}
-                  setImg={setImg}
-                />
-              </div>
-            </>
-          ) : (
-            <h3 className="no_conv">Select a user to start a conversation!</h3>
-          )}
-        </div> 
-      </div>*/}
     </>
   ) : null;
 };

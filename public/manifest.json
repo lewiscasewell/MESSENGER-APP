@@ -1,6 +1,13 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "lang": "en-US",
+  "short_name": "MESSENGER-APP",
+  "name": "MESSENGER-APP",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/login",
+  "description": "Message other users on the app.",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
   "icons": [
     {
       "src": "favicon.ico",
@@ -17,9 +24,5 @@
       "type": "image/png",
       "sizes": "512x512"
     }
-  ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  ]
 }

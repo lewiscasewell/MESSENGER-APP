@@ -1,14 +1,15 @@
-import React, { useContext, useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 import { auth, db, storage } from "../firebase";
 import { doc, getDoc, updateDoc } from "firebase/firestore";
+
 import {
   Avatar,
   Box,
   Button,
   Center,
   CloseButton,
-  Container,
   Drawer,
   DrawerBody,
   DrawerContent,
@@ -19,7 +20,7 @@ import {
   Text,
   useDisclosure,
 } from "@chakra-ui/react";
-import { EditIcon, DeleteIcon } from "@chakra-ui/icons";
+
 import { signOut } from "firebase/auth";
 import {
   deleteObject,
@@ -27,6 +28,7 @@ import {
   ref,
   uploadBytes,
 } from "firebase/storage";
+
 import Camera from "./svg/Camera";
 import Delete from "./svg/Delete";
 

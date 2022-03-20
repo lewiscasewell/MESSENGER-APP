@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Img from "../image1.png";
 import { onSnapshot, doc } from "firebase/firestore";
 import { db } from "../firebase";
 import { Avatar, AvatarBadge, Box, Text } from "@chakra-ui/react";
@@ -66,41 +65,6 @@ const User = ({ user, selectUser, userCurrent, chat }) => {
           </Text>
         ) : null}
       </Box>
-
-      {/* <div
-        className={`user_wrapper ${chat.name === user.name && "selected_user"}`}
-        onClick={() => selectUser(user)}
-      >
-        <div className="user_info">
-          <div className="user_detail">
-            <img src={user.avatar || Img} alt="avatar" className="avatar" />
-            <h4>{user.name}</h4>
-
-            {data?.from !== userCurrent && data?.unread && (
-              <small className="unread">New</small>
-            )}
-          </div>
-          <div
-            className={`user_status ${user.isOnline ? "online" : "offline"}`}
-          ></div>
-        </div>
-        {data && (
-          <p className="truncate">
-            <strong>{data.from === userCurrent ? "Me" : null}</strong>
-            {data.text}
-          </p>
-        )}
-      </div>
-      <div
-        onClick={() => selectUser(user)}
-        className={`sm_container ${chat.name === user.name && "selected_user"}`}
-      >
-        <img
-          src={user.avatar || Img}
-          alt="avatar"
-          className="avatar sm_screen"
-        />
-      </div> */}
     </>
   );
 };
